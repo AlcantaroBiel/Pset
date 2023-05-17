@@ -1,3 +1,7 @@
+--Deleta banco de dados e usuario caso existam;
+DROP DATABASE IF EXISTS uvv;
+DROP USER IF EXISTS gabriel;
+
 --Cria usuario gabriel;
 CREATE USER gabriel WITH PASSWORD 'biel12345' CREATEDB CREATEROLE;
 
@@ -5,7 +9,6 @@ CREATE USER gabriel WITH PASSWORD 'biel12345' CREATEDB CREATEROLE;
 SET ROLE gabriel;
 
 --Criação do banco de dados uvv;
-DROP DATABASE IF EXISTS uvv;
 CREATE DATABASE uvv
 OWNER gabriel
 template template0
